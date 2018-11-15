@@ -1,0 +1,3 @@
+---
+- include: safe-rm-install.yml
+- include: protect-vital-data.yml

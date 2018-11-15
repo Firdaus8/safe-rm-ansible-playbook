@@ -1,0 +1,7 @@
+---
+- name: Membuat file protector di dalam directory
+  file:
+      path: "{{ item }}/-i"
+      state: touch
+  with_items:
+    - "{{ protecteddir }}"

@@ -1,0 +1,83 @@
+---
+#untuk directory yang bisa ditambahkan file protector
+protecteddir:
+  - /
+  - /bin
+  - /boot
+  - /dev
+  - /etc
+  - /home
+  - /lib
+  - /lib64
+  - /lost+found
+  - /media
+  - /mnt
+  - /opt
+  - /root
+  - /run
+  - /sbin
+  - /srv
+  - /tmp
+  - /usr
+  - /usr/local
+  - /usr/local/cpanel
+  - /var
+  - /var/lib
+  - /var/lib/mysql
+  - /etc/profile.d
+  - /etc/rc.d
+  - /etc/rc.d/init.d
+  - /etc/skel
+  - /etc/X11
+  - /usr/bin
+  - /usr/include
+  - /usr/share
+  - /usr/lib
+  - /usr/sbin
+  - /etc/init.d
+
+
+ 
+#Untuk directory yang protected (tidak bisa write) atau file biasa
+protectedfile:
+  - /proc
+  - /sys
+  - /boot/vmlinuz
+  - /dev/hda
+  - /dev/hdc
+  - /dev/null
+  - /etc/bashrc
+  - /etc/crontab
+  - /etc/exports
+  - /etc/fstab
+  - /etc/group
+  - /etc/grub.conf
+  - /etc/lilo.conf
+  - /etc/hosts
+  - /etc/hosts.allow
+  - /etc/host.deny
+  - /etc/inittab
+  - /etc/issue
+  - /etc/modules.conf
+  - /etc/motd
+  - /etc/mtab
+  - /etc/passwd
+  - /etc/printcap
+  - /etc/profile
+  - /etc/resolv.conf
+  - /etc/securetty
+  - /etc/termcap
+  - /usr/bin/X11
+  - /proc/cpuinfo
+  - /proc/filesystems
+  - /proc/interrupts
+  - /proc/ioports
+  - /proc/meminfo
+  - /proc/modules
+  - /proc/mount
+  - /proc/stat
+  - /proc/swaps
+  - /version
+  - /var/log/lastlog
+  - /var/log/messages
+  - /var/log/wtmp

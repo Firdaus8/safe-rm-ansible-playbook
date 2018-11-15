@@ -1,0 +1,31 @@
+---
+- name: Check apakah sudah terinstall rm-safe
+  stat:
+    path: /bin/rm-ori
+  register: status
+
+- name: Rename /bin/rm jadi /bin/rm-ori jika belum terinstall rm-safe
+  copy:
+    src: /bin/rm
+    dest: /bin/rm-ori
+    owner: root
+    group: root
+    mode: 0755
+    remote_src: yes
+  when: status.stat.exists == False 
+
+- name: Replace /bin/rm dengan safe-rm
+  copy:
+    src: rm
+    dest: /bin/rm
+    owner: root
+    group: root
+    mode: 0755
+  when: status.stat.exists == False
+
+- name: setting safe-rm
+  template:
+    src: safe-rm.conf.j2
+    dest: /etc/safe-rm.conf
+
+
